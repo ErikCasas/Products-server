@@ -4,4 +4,4 @@ import db from "./config.js";
 const { PORT, URI } = process.env 
 
 db(URI);
-app.listen(1000, () => console.log(`SERVER ON PORT ${PORT}`));
+app.listen(PORT, () => console.log(`SERVER ON PORT ${PORT}`));
