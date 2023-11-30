@@ -1,16 +1,17 @@
 import { Router } from "express";
-import Products from "../schema/ProductSchema.js";
-
+import {
+  getAllProducts,
+  getProductDetail,
+  deleteProduct,
+  createProduct,
+  updateProduct,
+} from "../controllers/_index.js";
 const router = Router();
 
-// router.use();
+router.get("/", getAllProducts);
+router.post("/", createProduct);
+router.put("/:productId", updateProduct);
+router.delete("/:productId", deleteProduct);
+router.get("/:productId", getProductDetail);
 
-router.get("/", async (req, res) => {
-  const products = await Products.find();
-  res.json(products);
-});
-// router.get("/:id", (req, res) => {});
-// router.post("/", (req, res) => {});
-// router.put("/:id", (req, res) => {});
-// router.delete("/:id", (req, res) => {});
 export default router;

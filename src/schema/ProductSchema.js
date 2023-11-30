@@ -25,6 +25,6 @@ const ProductSchema = new Schema(
   { timestamps: false, versionKey: false }
 );
 
-const Products = model("ProductMoel",ProductSchema ,"Hola");
+const Products = model("ProductModel", ProductSchema, "Products");
 
 export default Products;
