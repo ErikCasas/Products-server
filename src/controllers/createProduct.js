@@ -6,7 +6,7 @@ import Products from "../schema/ProductSchema.js";
  */
 
 const createProduct = async (req, res) => {
-  const newProduct = req.body; //cambiar por product
+  const newProduct = req.body; 
 
   try {
     await new Products(newProduct).save();
