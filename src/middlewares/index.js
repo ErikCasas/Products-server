@@ -1,5 +1,5 @@
-import routeNotFound from "./routeNotFound";
-import validateBody from "./validateBody";
-import validateMethod from "./validateMethod";
+import routeNotFound from "./routeNotFound.js";
+import validateBody from "./validateBody.js";
+import validateMethod from "./validateMethod.js";
 
 export { routeNotFound, validateBody, validateMethod };
