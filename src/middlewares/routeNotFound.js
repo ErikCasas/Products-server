@@ -1,6 +1,6 @@
 const routeNotFound = (req, res) => {
-  const route = req.url;
-  res.status(400).json({ error: `route "${route} not found"` });
+  const {url} = req;
+  res.status(400).json({ error: `route "${url} not found"` });
 };
 
 

@@ -5,7 +5,7 @@
  */
 
 const validateMethod = (req, res, next) => {
-  const method = req.method;
+  const {method} = req;
   const methodsAllowed = ["GET", "POST", "PUT", "DELETE"];
 
   methodsAllowed.includes(method)
@@ -14,3 +14,4 @@ const validateMethod = (req, res, next) => {
 };
 
 export default validateMethod;
+ 
