@@ -1,28 +1,36 @@
+<img src="https://media.ada-school.org/5fcd3ac12b22eab4d301d819/5fcd49a07ffe7b324996b784/ada-logo-cfdb7c7b-1791-408f-b5b4-240b22bd1653.png?version=2">
+
 # Sever Ada-commerce
 
-Esta es una API rest echa en express creada con fines educativos para ser cosumida en las sesiones de React con el fin de demostrar el como se integran las partes del back-end y del front-end.
+Este repositorio contiene una API REST construida con Express, diseñada para propósitos educativos. Es utilizada en sesiones de React para demostrar la integración de back-end y front-end.
 
 Para iniciar el servidor primero se debe de clonar con el siguiente link
 
+1. Clonar el repositorio:
+
 ```
-https://github.com/ErikCasas/Products-server.git
+git clone https://github.com/ErikCasas/Products-server.git
 ```
 
-luego ejecutar los siguientes comandos en su respectivo orden
+2. Cambiar al directorio del proyecto:
 
 ```
 cd Products-server
 ```
 
+3. Instalar dependencias:
+
 ```
 npm install
 ```
+
+3. Instalar dependencias:
 
 ```
 npm start
 ```
 
-Antes de explorar los endponts definidos en el servidor, debes de realizar una solicitud de tipo GET al endpoint de `/api/products/populate` con el fin de llenar la base de datos con los documentos sugeridos para las practicas, esto llenara la base de datos con productos que tendran la siguiente estructura:
+Antes de usar los endpoints, es necesario poblar la base de datos. Realiza una solicitud GET a `/api/products/populate` para agregar productos de ejemplo con la siguiente estructura:
 
       name: "string",
       price: "number",
@@ -31,17 +39,19 @@ Antes de explorar los endponts definidos en el servidor, debes de realizar una s
       sale: "boolean",
       stock: "number",
 
-Es importante tener presente esta estructura ya que al crear o actaulizar un documento, el servidor no aceptara ninguna solicitud cuya carga JSON traiga información distinta a la esperada y/o que no sea del tipo de dato esperado
+**Nota**: Al crear o actualizar productos, asegúrate de que el JSON enviado coincida con esta estructura y los tipos de datos correctos.
 
-## End Points
+## Endpoints
 
-##### :productId: id de tipo ObjectId de mongoose
+Los siguientes endpoints están disponibles:
 
-| verbo HTTP | end point                | funcionalidad                           |
-| ---------- | ------------------------ | --------------------------------------- |
-| GET        | /api/products/populate   | llenar la base de datos                 |
-| GET        | /api/products/           | responde con todos los docuementos      |
-| GET        | /api/products/:productId | responde con un documento en especifico |
-| POST       | /api/products/           | crear un nuevo producto                 |
-| PUT        | /api/products/:productId | edita un producto existente             |
-| DELETE     | /api/products/:productId | elimina un producto existente           |
+| verbo HTTP | end point                | funcionalidad                               |
+| ---------- | ------------------------ | ------------------------------------------- |
+| GET        | /api/products/populate   | Poblar la base de datos con datos de prueba |
+| GET        | /api/products/           | Obtener todos los productos                 |
+| GET        | /api/products/:productId | Obtener un producto específico              |
+| POST       | /api/products/           | Crear un nuevo producto                     |
+| PUT        | /api/products/:productId | Editar un producto existente                |
+| DELETE     | /api/products/:productId | Eliminar un producto existente              |
+
+\*`:productId` es un identificador del tipo ObjectId de Mongoose.
