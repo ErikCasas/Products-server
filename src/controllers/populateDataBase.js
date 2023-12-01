@@ -10,3 +10,7 @@ const populateDb = async (req, res) => {
     await Products.insertMany(products)
     res.status(201).json({message:"The resources have been created in the database"})
 };
+
+
+
+export default populateDb
