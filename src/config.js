@@ -1,8 +1,12 @@
 import { connect } from "mongoose";
 
 const db = async (URI) => {
-  await connect(URI);
-  console.log("CONNECT!!");
+  try {
+    await connect(URI);
+    console.log("CONNECT!!");
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export default db;
