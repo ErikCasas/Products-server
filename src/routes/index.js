@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { validateBodyForUpdate } from "../middlewares/index.js";
+import { validateBody } from "../middlewares/index.js";
 import {
   getAllProducts,
   getProductDetail,
@@ -14,9 +14,9 @@ router.get("/populate", populateDb);
 router.get("/:productId", getProductDetail);
 router.get("/", getAllProducts);
 
-router.post("/", createProduct);
+router.post("/", validateBody, createProduct);
 
-router.put("/:productId", validateBodyForUpdate, updateProduct);
+router.put("/:productId", validateBody, updateProduct);
 
 router.delete("/:productId", deleteProduct);
 

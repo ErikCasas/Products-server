@@ -1,5 +1,5 @@
+import validateBody from "./validateBody.js"
 import routeNotFound from "./routeNotFound.js";
-import validateBodyForUpdate from "./validateBodyForUpdate.js"
 import validateMethod from "./validateMethod.js";
 
-export { routeNotFound, validateBodyForUpdate, validateMethod };
+export { routeNotFound, validateBody, validateMethod };
