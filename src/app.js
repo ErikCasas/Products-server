@@ -1,6 +1,5 @@
 import {
   routeNotFound,
-  validateBody,
   validateMethod,
 } from "./middlewares/index.js";
 import express from "express";
@@ -16,7 +15,6 @@ app.use(cors());
 app.use(morgan("dev"));
 app.use(express.json());
 app.use(validateMethod);
-app.use(validateBody);
 
 //enrutador
 app.use("/api/products", router);

@@ -7,10 +7,15 @@ import Products from "../schema/ProductSchema.js";
  */
 
 const populateDb = async (req, res) => {
-    await Products.insertMany(products)
-    res.status(201).json({message:"The resources have been created in the database"})
+  try {
+    await Products.insertMany(products);
+    res
+      .status(201)
+      .json({ message: "The resources have been created in the database" });
+  } catch (error) {
+    console.log("error :>> ", error.message);
+    res.status(500).json(error);
+  }
 };
 
-
-
-export default populateDb
+export default populateDb;
