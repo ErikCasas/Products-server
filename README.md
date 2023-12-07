@@ -24,7 +24,7 @@ cd Products-server
 npm install
 ```
 
-3. Instalar dependencias:
+3. poner a funcionar el servidor:
 
 ```
 npm start
